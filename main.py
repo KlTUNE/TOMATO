@@ -23,7 +23,7 @@ with open('data.json','r', encoding="utf-8") as f:
 def index():
     return render_template("index.html")
 
-@app.route('/api/get_song' , methods=['POST'])
+@app.route('/api/get_song', methods=['POST'])
 def get_song():
     p_name = request.form.get('name', None)
     print (p_name)
