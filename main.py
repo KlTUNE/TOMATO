@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template, jsonify
-import json
+from spotipy.oauth2 import SpotifyClientCredentials
+import json, spotipy
 
 # natuki  登録してある人の名前一覧
 # haruka
@@ -34,4 +35,4 @@ def get_song():
 
 if __name__ == "__main__":
     # debugモードが不要の場合は、debug=Trueを消してください
-    app.run(debug=True, port=8888)
+    app.run(debug=True, port=8888, host='0.0.0.0')
